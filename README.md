@@ -2,7 +2,7 @@
 
 ## About
 
-* This is a Python version of (LLVM1)[https://github.com/sokoide/llvm1]
+* This is a Python version of [LLVM1](https://github.com/sokoide/llvm1)
 
 ## How to run
 
@@ -10,6 +10,20 @@
 ```sh
 pip install -r requirements
 python main.py
+
+# it'll generate out.ll contains below..
+$ cat out.ll
+; ModuleID = '<string>'
+source_filename = "<string>"
+target triple = "unknown-unknown-unknown"
+
+define i64 @main() {
+entrypoint:
+  call void @write(i64 42)
+  ret i64 42
+}
+
+declare void @write(i64)
 ```
 
 * builtin.c defines `write` and `writeln` funcitons and compiled into builtin.ll
