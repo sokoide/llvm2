@@ -1,0 +1,6 @@
+# generated or intermediate files
+builtin.ll
+linked
+linked.ll
+linked.s
+out.ll
